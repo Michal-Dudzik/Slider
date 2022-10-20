@@ -1,0 +1,64 @@
+html {
+	background: #474747;
+}
+
+/* Basic */
+
+.center {
+	width: 80%;
+}
+
+.material-symbols-outlined {
+	font-size: 56px;
+}
+
+#carrouselRight {
+	position: absolute;
+	right: 20%;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+#carrouselLeft {
+	position: absolute;
+	left: 20%;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+/* Carrousel */
+
+.carrousel {
+	width: 600px;
+	height: 300px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.carrousel-item {
+	width: 600px;
+	height: 300px;
+
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	opacity: 0;
+	transition: opacity 1s;
+}
+
+#headline {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	position: absolute;
+	top: 80%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.smlimg {
+	width: 100px;
+	height: 50px;
+}
