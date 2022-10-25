@@ -1,58 +1,33 @@
-let btnRight = document.querySelector('#carrouselRight');
-btnRight.addEventListener('click', carrouselRight);
+let activeIndex = 0;
+const slides = document.querySelectorAll('article');
 
-let btnleft = document.querySelector('#carrouselLeft');
-btnleft.addEventListener('click', carrouselLeft);
+const handleLeftClick = () => {
+	const nextIndex = activeIndex - 1 >= 0 ? activeIndex - 1 : slides.length - 1;
+	const currentSlide = document.querySelector(`[data-index="${activeIndex}"]`),
+		nextSlide = document.querySelector(`[data-index="${nextIndex}"]`);
 
-window.onload = function () {
-	carrouselInit();
+	currentSlide.dataset.status = 'after';
+
+	nextSlide.dataset.status = 'becoming-active-from-before';
+
+	setTimeout(() => {
+		nextSlide.dataset.status = 'active';
+		activeIndex = nextIndex;
+	});
 };
 
-function carrouselInit() {
-	var carrousel = document.getElementById('carrouselimg1');
-	carrousel.style.opacity = '1';
-	setInterval(carrouselAutoChange, 5000);
-}
+const handleRightClick = () => {
+	const nextIndex = activeIndex + 1 <= slides.length - 1 ? activeIndex + 1 : 0;
 
-function carrouselAutoChange() {
-	carrouselRight();
-}
+	const currentSlide = document.querySelector(`[data-index="${activeIndex}"]`),
+		nextSlide = document.querySelector(`[data-index="${nextIndex}"]`);
 
-function carrouselChange(i) {
-	var carrousel = document.getElementById('carrouselimg' + i);
-	carrousel.style.opacity = '1';
-}
+	currentSlide.dataset.status = 'before';
 
-function carrouselLeft() {
-	let nbCarrousel = 5;
-	let num = 0;
+	nextSlide.dataset.status = 'becoming-active-from-after';
 
-	for (let i = 0; i < nbCarrousel; i++) {
-		num = i + 1;
-		var carrousel = document.getElementById('carrouselimg' + num);
-		if (carrousel.style.opacity == '1') {
-			carrousel.style.opacity = '0';
-			if (i == 0) {
-				return carrouselChange(5);
-			}
-			return carrouselChange(num - 1);
-		}
-	}
-}
-
-function carrouselRight() {
-	let nbCarrousel = 5;
-	let num = 0;
-
-	for (let i = 0; i < nbCarrousel; i++) {
-		num = i + 1;
-		var carrousel = document.getElementById('carrouselimg' + num);
-		if (carrousel.style.opacity == '1') {
-			carrousel.style.opacity = '0';
-			if (i == 4) {
-				return carrouselChange(1);
-			}
-			return carrouselChange(num + 1);
-		}
-	}
-}
+	setTimeout(() => {
+		nextSlide.dataset.status = 'active';
+		activeIndex = nextIndex;
+	});
+};
