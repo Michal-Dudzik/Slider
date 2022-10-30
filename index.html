@@ -12,6 +12,7 @@
 			href="https://fonts.googleapis.com/css?family=Roboto" />
 
 		<script src="https://kit.fontawesome.com/944eb371a4.js"></script>
+
 		<script src="script.js" defer></script>
 	</head>
 	<body>
@@ -22,11 +23,11 @@
 				</a>
 			</div>
 			<div id="nav-galery-section" class="nav-section">
-				<img src="https://picsum.photos/1080/540?random=1" />
-				<img src="https://picsum.photos/1080/540?random=2" />
-				<img src="https://picsum.photos/1080/540?random=3" />
-				<img src="https://picsum.photos/1080/540?random=4" />
-				<img src="https://picsum.photos/1080/540?random=5" />
+				<img id="nav-img-0" src="https://picsum.photos/1080/540?random=1" />
+				<img id="nav-img-1" src="https://picsum.photos/1080/540?random=2" />
+				<img id="nav-img-2" src="https://picsum.photos/1080/540?random=3" />
+				<img id="nav-img-3" src="https://picsum.photos/1080/540?random=4" />
+				<img id="nav-img-4" src="https://picsum.photos/1080/540?random=5" />
 			</div>
 			<div id="nav-buttons-section" class="nav-section">
 				<button class="nav-button" type="button" onclick="handleLeftClick()">
@@ -43,9 +44,7 @@
 				<div class="article-image-section article-section"></div>
 				<div class="article-title-section article-section">
 					<h2>Recreation From Scratch</h2>
-					<button class="slider-button" type="button" onclick="autoSlide()">
-						<i class="fa-solid fa-play"></i>
-					</button>
+					<button class="slider-button fa-solid fa-play" type="button"></button>
 				</div>
 			</article>
 			<article data-index="1" data-status="inactive">
@@ -53,9 +52,7 @@
 
 				<div class="article-title-section article-section">
 					<h2>Wicked Cool Library Shelves</h2>
-					<button class="slider-button" type="button" onclick="autoSlide()">
-						<i class="fa-solid fa-play"></i>
-					</button>
+					<button class="slider-button fa-solid fa-play" type="button"></button>
 				</div>
 			</article>
 			<article data-index="2" data-status="inactive">
@@ -63,9 +60,7 @@
 
 				<div class="article-title-section article-section">
 					<h2>Neato Toledo Lighthouse</h2>
-					<button class="slider-button" type="button" onclick="autoSlide()">
-						<i class="fa-solid fa-play"></i>
-					</button>
+					<button class="slider-button fa-solid fa-play" type="button"></button>
 				</div>
 			</article>
 			<article data-index="3" data-status="inactive">
@@ -73,9 +68,16 @@
 
 				<div class="article-title-section article-section">
 					<h2>Super Space Blob</h2>
-					<button class="slider-button" type="button" onclick="autoSlide()">
-						<i class="fa-solid fa-play"></i>
-					</button>
+					<button class="slider-button fa-solid fa-play" type="button"></button>
+				</div>
+			</article>
+
+			<article data-index="4" data-status="inactive">
+				<div class="article-image-section article-section"></div>
+
+				<div class="article-title-section article-section">
+					<h2>Super Space Blob</h2>
+					<button class="slider-button fa-solid fa-play" type="button"></button>
 				</div>
 			</article>
 		</main>
