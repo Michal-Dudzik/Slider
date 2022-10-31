@@ -1,4 +1,5 @@
 let activeIndex = 0;
+let intervalId = 5000;
 const slides = document.querySelectorAll('article');
 const sliderButtons = document.querySelectorAll('.slider-button');
 const navImgs = document.querySelectorAll('#nav-galery-section img');
@@ -35,9 +36,12 @@ const handleRightClick = () => {
 };
 
 function autoSlide() {
-	setInterval(() => {
-		handleRightClick();
-	}, 4000);
+	intervalId = 5000;
+	setInterval(handleRightClick, intervalId);
+}
+
+function stopAutoSlide() {
+	intervalId = 0;
 }
 
 const handleSliderButton = (e) => {
@@ -48,7 +52,7 @@ const handleSliderButton = (e) => {
 			autoSlide();
 		} else if (button.classList.contains('fa-pause')) {
 			button.classList.replace('fa-pause', 'fa-play');
-			clearInterval(autoSlide);
+			stopAutoSlide();
 		}
 	});
 };
