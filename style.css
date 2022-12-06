@@ -1,5 +1,5 @@
 :root {
-	--background-color: rgb(79, 94, 112);
+	--background-color: rgb(89, 104, 122);
 	--font-color: rgb(255, 255, 255);
 	--border-color: rgb(0, 157, 255);
 	--highlight-color: rgb(48, 48, 48);
@@ -65,8 +65,8 @@ nav .nav-section {
 }
 
 #nav-galery-section img {
-	width: calc(100% / 6);
-	padding-left: 0.5rem;
+	width: calc(100% / 8);
+	/* padding-left: 0.5rem; */
 }
 
 #nav-galery-section,
@@ -168,23 +168,23 @@ main > article > .article-section {
 
 /* Images for every slide */
 main > article:first-child > .article-image-section {
-	background-image: url('https://picsum.photos/1080/540?random=1');
+	background-image: url('https://picsum.photos/1920/1080?random=1');
 }
 
 main > article:nth-child(2) > .article-image-section {
-	background-image: url('https://picsum.photos/1080/540?random=2');
+	background-image: url('https://picsum.photos/1920/1080?random=2');
 }
 
 main > article:nth-child(3) > .article-image-section {
-	background-image: url('https://picsum.photos/1080/540?random=3');
+	background-image: url('https://picsum.photos/1920/1080?random=3');
 }
 
 main > article:nth-child(4) > .article-image-section {
-	background-image: url('https://picsum.photos/1080/540?random=4');
+	background-image: url('https://picsum.photos/1920/1080?random=4');
 }
 
 main > article:nth-child(5) > .article-image-section {
-	background-image: url('https://picsum.photos/1080/540?random=5');
+	background-image: url('https://picsum.photos/1920/1080?random=5');
 }
 
 /* Center main images */
