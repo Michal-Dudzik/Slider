@@ -52,30 +52,47 @@ body {
 	object-position: 100% center;
 }
 
-.sml-image {
-	width: 8%;
+#enhance {
+	width: 100%;
 }
 
-.enchance {
-	width: 90vw;
-	height: 80vh;
-	transform: translate(-0%, -5%);
-	transition: ease-in-out 200ms;
-}
-
-#preview {
-	position: absolute;
-	right: 0%;
-	bottom: 0%;
-	transform: translate(27%, -10%);
-	transition: ease-in-out 200ms;
-	margin: auto;
+.show {
+	animation: appear 0.5s ease-out forwards;
 }
 
 .hide {
-	display: none;
+	animation: vanish 0.5s ease-out forwards;
 }
 
-/* .blur {
-	filter: blur(5px);
-} */
+@keyframes appear {
+	0% {
+		opacity: 0%;
+		visibility: hidden;
+	}
+
+	100% {
+		opacity: 100%;
+		visibility: visible;
+	}
+}
+
+@keyframes vanish {
+	0% {
+		opacity: 100%;
+		visibility: visible;
+	}
+
+	100% {
+		opacity: 0%;
+		visibility: hidden;
+	}
+}
+
+.moveDown {
+	transform: translate(-55%, 320%) !important;
+}
+
+.moveDown > .image {
+	height: 10% !important;
+	width: 20% !important;
+}
