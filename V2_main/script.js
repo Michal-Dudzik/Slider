@@ -50,10 +50,21 @@ window.onmousemove = (e) => handleOnMove(e);
 window.ontouchmove = (e) => handleOnMove(e.touches[0]);
 
 const images = document.querySelectorAll('.image');
+const enhanced = document.querySelector('#enhance');
+const title = document.querySelector('#title');
+
+images.forEach((image) => {
+	image.addEventListener('click', () => {
+		enhanced.src = image.src;
+	});
+});
+
 images.forEach((image) => {
 	image.addEventListener('dblclick', () => {
-		image.classList.toggle('enchance');
-		image.classList.toggle('image');
-		document.querySelector('#preview').classList.toggle('hide');
+		enhanced.src = image.src;
+		title.classList.toggle('hide');
+		enhanced.classList.toggle('hide');
+
+		track.classList.toggle('moveDown');
 	});
 });
