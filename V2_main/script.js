@@ -65,6 +65,9 @@ images.forEach((image) => {
 		title.classList.toggle('hide');
 		enhanced.classList.toggle('hide');
 
+		// title.classList.toggle('show');
+		// enhanced.classList.toggle('show');
+
 		track.classList.toggle('moveDown');
 	});
 });
